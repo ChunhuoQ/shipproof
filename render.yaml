@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: shipproof
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/v1/capabilities

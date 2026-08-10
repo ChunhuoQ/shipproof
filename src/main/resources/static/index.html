@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ShipProof audits hackathon submissions before judges do: live demo, public repo, evidence, reproducibility, safety, and pitch.">
+  <title>ShipProof — Prove it before you pitch it.</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <nav>
+    <a class="brand" href="/"><span class="brand-mark">S<span>P</span></span><strong>ShipProof</strong></a>
+    <div class="nav-right"><a href="#method">Method</a><a href="#scanner">Scanner</a><span id="api-state" class="status-pill"><i></i> checking engine</span></div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="kicker"><span>OPC / AUTONOMOUS AGENTS</span><span>BUIDL_QUESTS 2026</span></div>
+        <h1>Prove it<br><em>before</em> you pitch it.</h1>
+        <p>ShipProof cold-opens your project the way a skeptical judge will: signed out, short on time, and unwilling to trust claims without evidence.</p>
+        <div class="hero-actions"><a class="cta" href="#scanner">Audit my submission <span>↘</span></a><a class="text-link" href="#method">See the seven checks</a></div>
+      </div>
+      <aside class="risk-card">
+        <div class="risk-head"><span>PRE-FLIGHT / 07 CHECKS</span><span class="live-dot">LIVE</span></div>
+        <div class="radar" aria-hidden="true"><div></div><div></div><div></div><span>?</span></div>
+        <p>Broken links are not small bugs.<br>To a judge, they are the product.</p>
+        <div class="risk-row"><span>Anonymous demo</span><b>HARD GATE</b></div>
+        <div class="risk-row"><span>Public repository</span><b>HARD GATE</b></div>
+        <div class="risk-row"><span>Reproducible build</span><b>HARD GATE</b></div>
+      </aside>
+    </section>
+
+    <div class="marquee"><span>REACHABILITY</span><b>✳</b><span>REPRODUCIBILITY</span><b>✳</b><span>CLAIM EVIDENCE</span><b>✳</b><span>SAFETY BOUNDARIES</span><b>✳</b><span>PITCH CLARITY</span></div>
+
+    <section id="scanner" class="scanner-section">
+      <header class="section-title"><span>01 / SCAN</span><div><h2>One cold open.<br>Zero polite assumptions.</h2><p>Public-network checks only. ShipProof blocks localhost and private network targets by design.</p></div></header>
+      <div class="workspace">
+        <form id="scan-form" class="scan-form">
+          <div class="form-head"><span>SUBMISSION INPUT</span><button type="button" id="sample" class="quiet-button">Load public sample</button></div>
+          <label>Project name<input id="projectName" name="projectName" required placeholder="e.g. ShipProof"></label>
+          <div class="form-pair">
+            <label>GitHub repository<input id="repositoryUrl" name="repositoryUrl" type="url" required placeholder="https://github.com/owner/repo"></label>
+            <label>Public demo<input id="demoUrl" name="demoUrl" type="url" required placeholder="https://your-demo.app"></label>
+          </div>
+          <div class="form-pair">
+            <label>Primary track<select id="track" name="track"><option>OPC / Super Individuals</option><option>Autonomous Agents</option><option>Sovereignty</option><option>Agent Commerce</option><option>AI Hardware & Applications</option></select></label>
+            <label>Public launch post<input id="socialUrl" name="socialUrl" type="url" placeholder="https://x.com/.../status/..."></label>
+          </div>
+          <label>Submission pitch<textarea id="pitch" name="pitch" required rows="6" placeholder="Who has the problem, what fails today, what your product changes, and what evidence proves it."></textarea><span class="counter"><b id="pitch-count">0</b> characters · 180+ recommended</span></label>
+          <button class="run-button" id="run" type="submit"><span>Run seven-check audit</span><b>→</b></button>
+          <p class="privacy-note">ShipProof reads only the public URLs you submit. It never clones code or requests repository credentials.</p>
+        </form>
+
+        <section id="report" class="report empty" aria-live="polite">
+          <div id="empty-state" class="empty-state"><span class="crosshair">+</span><h3>Evidence has not been collected.</h3><p>Run a scan to receive a judge-ready score, hard-gate verdict, and prioritized repair queue.</p><div class="mini-proof"><span>REPORT RECEIPT</span><code>awaiting scan…</code></div></div>
+          <div id="loading-state" class="loading-state" hidden><div class="loader"><i></i><i></i><i></i></div><h3 id="loading-label">Cold-opening your demo…</h3><p>Checking the project from outside your local environment.</p></div>
+          <div id="report-content" hidden>
+            <div class="report-top"><div><span>SHIPPROOF VERDICT</span><h3 id="verdict">—</h3><p id="report-meta">—</p></div><div id="score-ring" class="score-ring"><strong id="score">0</strong><small>/100</small></div></div>
+            <div class="score-grid" id="score-grid"></div>
+            <div class="findings-head"><span>REPAIR QUEUE</span><span id="check-count">0/7 passed</span></div>
+            <div id="findings" class="findings"></div>
+            <div class="receipt"><div><span>VERIFIABLE REPORT RECEIPT</span><code id="receipt-hash">—</code></div><button id="download" type="button">Download JSON</button></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="method" class="method-section">
+      <header class="section-title inverse"><span>02 / METHOD</span><div><h2>The seven checks<br>a README cannot bluff.</h2></div></header>
+      <div class="checks">
+        <article><b>01</b><h3>Anonymous demo</h3><p>Real HTTP reachability, useful response body, no localhost or sign-in assumption.</p><i>20 points · hard gate</i></article>
+        <article><b>02</b><h3>Public repository</h3><p>GitHub API verification, default branch, recency, license, and observable project metadata.</p><i>20 points · hard gate</i></article>
+        <article><b>03</b><h3>Reproducibility</h3><p>Exact run instructions and an open license—the minimum needed for a cold evaluator.</p><i>15 points · hard gate</i></article>
+        <article><b>04</b><h3>Claim evidence</h3><p>Screenshots, tests, benchmarks, architecture, endpoints, or verifiable transactions.</p><i>15 points</i></article>
+        <article><b>05</b><h3>Pitch clarity</h3><p>A named user, current failure, measurable change, and defensible differentiation.</p><i>10 points</i></article>
+        <article><b>06</b><h3>Safety boundaries</h3><p>Permissions, rejected inputs, privacy, failure modes, and honest limitations.</p><i>10 points</i></article>
+        <article><b>07</b><h3>Submission pack</h3><p>One primary track and a public launch post ready before the deadline.</p><i>10 points</i></article>
+      </div>
+    </section>
+
+    <section class="manifesto"><span>03 / WHY</span><blockquote>“A judge should never have to imagine that your project works.”</blockquote><p>ShipProof turns vague readiness into inspectable evidence and leaves a SHA-256 linked receipt for every audit.</p></section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">S<span>P</span></span><strong>ShipProof</strong></div><p>BUIDL_QUESTS 2026 · OPC / Autonomous Agents</p><p>Open source · Java 8 · Deterministic first</p></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
