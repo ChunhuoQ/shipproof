@@ -10,6 +10,13 @@
 
 Secondary fit: Autonomous Agents.
 
+## Registration status
+
+An OpenArena registry record was created for ShipProof on August 10, 2026. The
+participant console currently marks the entry as tentative until every required review
+field and the event-rules confirmation are saved. The public repository is live and its
+Java 8 GitHub Actions build is passing.
+
 ## One-liner
 
 ShipProof cold-opens a hackathon project like a skeptical judge and turns public evidence
@@ -88,7 +95,9 @@ also have boundaries.”
 - [x] Responsive web experience
 - [x] Automated tests
 - [x] Docker and Render deployment config
-- [ ] Public GitHub repository URL
+- [x] Public GitHub repository URL
+- [x] OpenArena registry record created
+- [ ] All required OpenArena review fields accepted
 - [ ] Public deployment URL
 - [ ] 60-second video URL
 - [ ] Public X post URL
