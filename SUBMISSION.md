@@ -64,7 +64,7 @@ also have boundaries.”
 ## Links to complete
 
 - Live demo: `https://YOUR-SHIPPROOF-DEPLOYMENT`
-- Repository: `https://github.com/YOUR-ACCOUNT/shipproof`
+- Repository: `https://github.com/ChunhuoQ/shipproof`
 - Demo video: `https://...`
 - X launch post: `https://x.com/YOUR-ACCOUNT/status/...`
 - OpenArena project: `https://openarena.to/...`

@@ -10,9 +10,9 @@ score, hard-gate verdict, prioritized repair queue, and tamper-evident report re
 Built for **BUIDL_QUESTS 2026**, primarily for the **OPC / Super Individuals** and
 **Autonomous Agents** tracks.
 
-ShipProof is maintained as an independent hackathon project. Run all ShipProof
-commands from the `shipproof/` directory; sibling projects have separate dependencies
-and submission histories.
+ShipProof is maintained as an independent hackathon project. Run commands from the
+repository root, or from `shipproof/` when using the multi-project workspace; sibling
+projects have separate dependencies and submission histories.
 
 ## The problem
 
@@ -151,7 +151,7 @@ After the repository, demo, and launch post are public, ShipProof can audit itse
 
 ```bash
 export SHIPPROOF_BASE_URL=https://your-deployment.example
-export SHIPPROOF_REPO_URL=https://github.com/your-account/shipproof
+export SHIPPROOF_REPO_URL=https://github.com/ChunhuoQ/shipproof
 export SHIPPROOF_DEMO_URL=https://your-deployment.example
 export SHIPPROOF_SOCIAL_URL=https://x.com/your-account/status/123
 ./scripts/self-audit.sh
