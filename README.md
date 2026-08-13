@@ -2,6 +2,11 @@
 
 > Prove it before you pitch it.
 
+## Live demo
+
+- **Web app:** https://shipproof-production-79c9.up.railway.app
+- **65-second walkthrough:** https://youtu.be/wgJhzmBk3d4
+
 ShipProof is an evidence-first preflight agent for hackathon submissions. Give it a
 public GitHub repository, live demo, pitch, launch post, and primary track. It cold-opens
 the project like a skeptical judge, applies seven deterministic checks, and returns a
